@@ -4,12 +4,22 @@ import { useApp } from '../context/AppContext';
 import './AdminLayout.css';
 
 function AdminLayout() {
-    const { language, user } = useApp();
+    const { language, user, authLoading } = useApp();
     const navigate = useNavigate();
     const location = useLocation();
     const [isNotifOpen, setIsNotifOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [isTransitioning, setIsTransitioning] = useState(false);
+
+    useEffect(() => {
+        if (!authLoading) {
+            if (!user) {
+                navigate('/login');
+            } else if (user.role !== 'admin' && user.role !== 'editor') {
+                navigate('/dashboard');
+            }
+        }
+    }, [user, authLoading, navigate]);
 
     useEffect(() => {
         setIsTransitioning(true);
@@ -30,6 +40,14 @@ function AdminLayout() {
         { path: '/admin/users', icon: 'people', label: { kz: 'Пайдаланушылар', ru: 'Пользователи', en: 'Users' } },
         { path: '/admin/settings', icon: 'settings', label: { kz: 'Баптаулар', ru: 'Настройки', en: 'Settings' } },
     ];
+
+    if (authLoading) {
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#f8fafc' }}>
+                <div className="loading-spinner"></div>
+            </div>
+        );
+    }
 
     return (
         <div className="admin-layout">

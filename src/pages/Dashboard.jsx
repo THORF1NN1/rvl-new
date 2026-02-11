@@ -789,6 +789,17 @@ function Dashboard() {
                                 {item.badge && <span className="menu-badge">{item.badge}</span>}
                             </button>
                         ))}
+
+                        {user.role === 'admin' && (
+                            <button
+                                onClick={() => navigate('/admin')}
+                                className="menu-item admin-link"
+                                style={{ color: 'var(--primary)', fontWeight: '500', marginTop: '1rem', borderTop: '1px solid var(--border-color)', paddingTop: '1rem' }}
+                            >
+                                <span className="material-icons">admin_panel_settings</span>
+                                <span>{language === 'kz' ? 'Әкімшілік панель' : language === 'ru' ? 'Админ-панель' : 'Admin Panel'}</span>
+                            </button>
+                        )}
                     </nav>
 
                     <button className="logout-btn" onClick={handleLogout}>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { applicationsAPI } from '../api';
 import './ServiceRequest.css';
 
 function ServiceRequest() {
@@ -8,6 +9,7 @@ function ServiceRequest() {
     const navigate = useNavigate();
     const location = useLocation();
     const [step, setStep] = useState(1);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         // Step 1: Service Selection
         serviceType: '',
@@ -157,16 +159,46 @@ function ServiceRequest() {
         if (step > 1) setStep(step - 1);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Simulate submission
-        showToast(texts.success[language], 'success');
+        if (isSubmitting) return;
 
-        // Generate order ID and redirect to dashboard
-        setTimeout(() => {
-            navigate('/dashboard');
-        }, 1500);
+        setIsSubmitting(true);
+        try {
+            // Get localized service name for display
+            const serviceName = texts[formData.serviceType]?.[language] || formData.serviceType;
+            const testNameInfo = testTypes[formData.serviceType]?.find(t => t.id === formData.testType);
+            const testName = testNameInfo?.name?.[language] || formData.testType;
+
+            const fullServiceTitle = `${serviceName}: ${testName}`;
+
+            await applicationsAPI.create({
+                client: user.name,
+                service: fullServiceTitle,
+                amount: '0 ₸', // To be calculated by admin
+                date: new Date(),
+                status: 'pending',
+                notes: `
+                    Urgency: ${formData.urgency}
+                    Animal: ${formData.animalType} (${formData.animalCount})
+                    Sample: ${formData.sampleType} (${formData.sampleDate})
+                    Method: ${formData.deliveryMethod}
+                    Notes: ${formData.notes}
+                `.trim()
+            });
+
+            showToast(texts.success[language], 'success');
+
+            // Redirect to dashboard
+            setTimeout(() => {
+                navigate('/dashboard');
+            }, 1500);
+        } catch (error) {
+            console.error('Submission failed:', error);
+            showToast(language === 'kz' ? 'Қате орын алды' : language === 'ru' ? 'Произошла ошибка' : 'An error occurred', 'error');
+            setIsSubmitting(false);
+        }
     };
 
     const renderStep1 = () => (
@@ -446,9 +478,9 @@ function ServiceRequest() {
                                     <span className="material-icons">arrow_forward</span>
                                 </button>
                             ) : (
-                                <button type="submit" className="btn btn-primary" disabled={!formData.agreement}>
+                                <button type="submit" className="btn btn-primary" disabled={!formData.agreement || isSubmitting}>
                                     <span className="material-icons">send</span>
-                                    {texts.submit[language]}
+                                    {isSubmitting ? (language === 'kz' ? 'Жіберілуде...' : language === 'ru' ? 'Отправка...' : 'Sending...') : texts.submit[language]}
                                 </button>
                             )}
                         </div>
