@@ -1,0 +1,56 @@
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all var(--transition-fast);
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    background: var(--gray-200);
+    transform: scale(1.05);
+}
+
+.theme-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-icon .material-icons {
+    font-size: 20px;
+    color: var(--gray-700);
+}
+
+.theme-icon.hidden {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+/* Sun icon (light mode button) */
+.theme-toggle:hover .material-icons {
+    color: var(--primary);
+}
+
+/* Dark mode specific styles */
+:root.dark .theme-toggle {
+    background: var(--gray-100);
+    border-color: var(--gray-200);
+}
+
+:root.dark .theme-toggle:hover {
+    background: var(--gray-200);
+}
+
+:root.dark .theme-icon .material-icons {
+    color: #fbbf24;
+}

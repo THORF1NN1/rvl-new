@@ -1,0 +1,302 @@
+/* Training Hero */
+.training-hero {
+    background: linear-gradient(135deg, var(--gray-50), var(--primary-50));
+    padding: var(--spacing-3xl) 0;
+}
+
+.training-hero .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.training-hero-content h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.training-hero-content>p {
+    color: var(--gray-600);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+}
+
+.training-stats {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.training-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.training-stat .material-icons {
+    font-size: 32px;
+    color: var(--primary);
+}
+
+.training-stat .stat-value {
+    display: block;
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.training-stat .stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+}
+
+.training-hero-event {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.event-badge {
+    background: var(--primary);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+}
+
+.training-hero-event h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.training-hero-event p {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+}
+
+.training-hero-event p .material-icons {
+    font-size: 16px;
+    color: var(--primary);
+}
+
+/* Training Layout */
+.training-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--spacing-xl);
+}
+
+/* Sidebar */
+.training-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.event-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+}
+
+.event-item:hover {
+    background: var(--gray-50);
+}
+
+.event-date {
+    background: var(--primary-50);
+    color: var(--primary-dark);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+.event-location {
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+}
+
+.help-section {
+    background: var(--primary-50);
+    text-align: center;
+}
+
+.help-section>.material-icons {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.help-section h4 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-sm);
+}
+
+.help-section p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+/* Courses */
+.courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.courses-header h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-xl);
+}
+
+.courses-header h2 .material-icons {
+    color: var(--primary);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.course-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    transition: all var(--transition-normal);
+}
+
+.course-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.course-badges {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.course-card .badge {
+    background: var(--gray-100);
+    color: var(--gray-600);
+}
+
+.course-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.course-card>p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    margin-bottom: var(--spacing-lg);
+}
+
+.course-instructor {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--gray-100);
+}
+
+.instructor-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--gray-100);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructor-avatar .material-icons {
+    color: var(--gray-400);
+}
+
+.instructor-name {
+    display: block;
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+}
+
+.instructor-credentials {
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .training-hero .container {
+        grid-template-columns: 1fr;
+    }
+
+    .training-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .training-sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .training-sidebar .sidebar-section {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .training-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .training-sidebar {
+        flex-direction: column;
+    }
+
+    .training-sidebar .sidebar-section {
+        min-width: 100%;
+    }
+}

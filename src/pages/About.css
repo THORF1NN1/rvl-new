@@ -1,0 +1,223 @@
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, var(--gray-50), var(--primary-50));
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.breadcrumb {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.page-hero h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.page-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: var(--font-size-2xl);
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* Mission & Vision */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+}
+
+.mission-card {
+    background: var(--white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    text-align: center;
+}
+
+.mission-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.mission-icon .material-icons {
+    font-size: 32px;
+    color: var(--white);
+}
+
+.mission-card h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.mission-card p {
+    line-height: 1.8;
+}
+
+/* History Timeline */
+.history-section {
+    background: var(--gray-50);
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-year {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 80px;
+}
+
+.timeline-content p {
+    color: var(--gray-700);
+}
+
+/* Team */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+}
+
+.team-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.team-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    background: var(--gray-100);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.team-avatar .material-icons {
+    font-size: 48px;
+    color: var(--gray-400);
+}
+
+.team-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+.team-position {
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+}
+
+.team-credentials {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+}
+
+/* Certificates */
+.certificates-section {
+    background: var(--gray-900);
+    color: var(--white);
+}
+
+.certificates-section .section-title {
+    color: var(--white);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.certificate-card {
+    background: var(--gray-800);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.cert-icon {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.certificate-card h3 {
+    color: var(--white);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.certificate-card p {
+    color: var(--gray-400);
+    font-size: var(--font-size-sm);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .team-grid,
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}

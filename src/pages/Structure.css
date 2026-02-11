@@ -1,0 +1,217 @@
+/* Structure Hero */
+.structure-hero {
+    background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.structure-hero .breadcrumb {
+    color: var(--gray-400);
+}
+
+.structure-hero h1 {
+    color: var(--white);
+}
+
+.structure-hero .page-subtitle {
+    color: var(--gray-300);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Map Section */
+.map-section {
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.map-container-lg {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.map-placeholder-lg {
+    min-height: 400px;
+    background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xl);
+}
+
+.map-placeholder-lg .material-icons {
+    font-size: 64px;
+    color: var(--primary);
+}
+
+.map-placeholder-lg h3 {
+    font-size: var(--font-size-xl);
+    color: var(--gray-700);
+}
+
+.map-placeholder-lg>p {
+    color: var(--gray-500);
+}
+
+.map-legend {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--gray-300);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+}
+
+.legend-dot.main {
+    background: var(--primary);
+}
+
+.legend-dot.regional {
+    background: var(--info);
+}
+
+/* Branches Grid */
+.branches-section {
+    background: var(--gray-50);
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.branch-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    position: relative;
+    transition: all var(--transition-normal);
+}
+
+.branch-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.branch-card.main-branch {
+    border-color: var(--primary);
+    border-width: 2px;
+}
+
+.main-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: var(--primary);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+.main-badge .material-icons {
+    font-size: 14px;
+}
+
+.branch-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    padding-right: 100px;
+}
+
+.branch-director {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-lg);
+}
+
+.branch-director .material-icons {
+    font-size: 16px;
+    color: var(--primary);
+}
+
+.branch-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.detail-item {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.detail-item .material-icons {
+    color: var(--gray-400);
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.detail-label {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--gray-800);
+}
+
+a.detail-value:hover {
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .branches-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .branches-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .branch-card h3 {
+        padding-right: 0;
+        margin-top: var(--spacing-xl);
+    }
+
+    .map-placeholder-lg {
+        min-height: 300px;
+    }
+}
