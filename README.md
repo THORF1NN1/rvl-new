@@ -1,16 +1,56 @@
-# React + Vite
+# Republican Veterinary Laboratory (RVL) Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend and backend codebase for the Republican Veterinary Laboratory (RVL) website, built for a hackathon.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Multilingual Support**: Kazakh, Russian, and English.
+- **Service Request System**: Users can submit service requests and training center enrollments.
+- **Admin Panel**: Dedicated dashboard for admins to manage applications, news, users, and settings.
+- **Backend API**: Express + MongoDB backend handling authentication, data storage, and business logic.
+- **Responsive Design**: Optimized for desktop and mobile devices.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React, Vite, React Router, CSS Modules
+- **Backend**: Node.js, Express, MongoDB, Mongoose
+- **Deployment**:
+  - Frontend: [Vercel](https://rvl-new.vercel.app/)
+  - Backend: [Render](https://rvl-server.onrender.com)
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install Dependencies**:
+   ```bash
+   npm install       # Frontend dependencies
+   cd server && npm install  # Backend dependencies
+   ```
+
+2. **Environment Variables**:
+   Create a `.env` file in the `server` directory:
+   ```env
+   MONGO_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+   PORT=5001
+   FRONTEND_URL=http://localhost:5173
+   ```
+   Create a `.env.local` file in the root directory:
+   ```env
+   VITE_API_URL=http://localhost:5001/api
+   ```
+
+3. **Run Development Servers**:
+   ```bash
+   # Run Backend (from root)
+   cd server && npm run dev
+
+   # Run Frontend (from root, open new terminal)
+   npm run dev
+   ```
+
+## Admin Access
+
+The admin panel is accessible at `/admin` (or via the Dashboard sidebar) for users with the `admin` role.
+
+---
+*Created for Student Hackathon*
