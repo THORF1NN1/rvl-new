@@ -56,7 +56,6 @@ function AdminMessages() {
         <div className="admin-messages">
             <div className="admin-table-wrapper premium-table">
                 <div className="admin-table-header">
-                    <h2>{language === 'kz' ? 'Хабарламалар' : language === 'ru' ? 'Сообщения' : 'Messages'}</h2>
                     <div className="table-actions">
                         <button className="btn btn-outline btn-sm" onClick={loadMessages}>
                             <span className="material-icons">refresh</span>

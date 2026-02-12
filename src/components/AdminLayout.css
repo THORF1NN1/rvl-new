@@ -801,6 +801,11 @@
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
+/* Fix for Admin News header actions alignment */
+.news-header-actions {
+    justify-content: flex-end;
+}
+
 /* Action Icons */
 .action-row {
     display: flex;

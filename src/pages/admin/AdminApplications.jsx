@@ -77,7 +77,6 @@ function AdminApplications() {
         <div className="admin-applications">
             <div className="admin-table-wrapper premium-table">
                 <div className="admin-table-header">
-                    <h2>{language === 'kz' ? 'Өтінімдер' : language === 'ru' ? 'Заявки' : 'Applications'}</h2>
                     <div className="filter-group">
                         {filters.map(f => (
                             <button

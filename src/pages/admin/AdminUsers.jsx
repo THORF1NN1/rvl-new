@@ -51,9 +51,7 @@ function AdminUsers() {
     return (
         <div className="admin-users">
             <div className="admin-table-wrapper premium-table">
-                <div className="admin-table-header">
-                    <h2>{language === 'ru' ? 'Пользователи' : language === 'kz' ? 'Пайдаланушылар' : 'Users'}</h2>
-                </div>
+
                 <div className="table-responsive">
                     {loading ? (
                         <div style={{ textAlign: 'center', padding: '2rem', color: '#64748b' }}>

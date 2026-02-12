@@ -145,8 +145,7 @@ function AdminNews() {
                 </div>
             ) : (
                 <div className="admin-table-wrapper premium-table">
-                    <div className="admin-table-header">
-                        <h2>{language === 'kz' ? 'Жаңалықтар' : language === 'ru' ? 'Новости' : 'News'}</h2>
+                    <div className="admin-table-header news-header-actions">
                         <button className="btn btn-primary" onClick={handleCreate} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 20px', borderRadius: '12px' }}>
                             <span className="material-icons">add</span>
                             {language === 'ru' ? 'Добавить новость' : 'Add Post'}
