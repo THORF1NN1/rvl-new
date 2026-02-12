@@ -4,6 +4,7 @@ import { newsAPI } from '../api';
 import { t } from '../data/translations';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation, useAnimatedCounter } from '../hooks/useScrollAnimation';
+import DnaModel from '../components/DnaModel';
 import './Home.css';
 
 function Home() {
@@ -70,6 +71,7 @@ function Home() {
                 <div className="hero-bg">
                     <img src="/images/hero-lab.png" alt="Laboratory" />
                     <div className="hero-overlay"></div>
+                    <DnaModel />
                 </div>
                 <div className="container hero-content">
                     <div className="hero-text animate-hero">
