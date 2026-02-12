@@ -4,6 +4,7 @@ const translations = {
     nav: {
         home: { kz: 'Басты бет', ru: 'Главная', en: 'Home' },
         about: { kz: 'Біз туралы', ru: 'О нас', en: 'About Us' },
+        team: { kz: 'Басшылық', ru: 'Руководство', en: 'Leadership' },
         services: { kz: 'Қызметтер', ru: 'Услуги', en: 'Services' },
         training: { kz: 'Оқу орталығы', ru: 'Учебный центр', en: 'Training Center' },
         legal: { kz: 'Құқықтық актілер', ru: 'Правовые акты', en: 'Legal Acts' },

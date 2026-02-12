@@ -11,6 +11,7 @@ import Chatbot from './components/Chatbot';
 import AdminLayout from './components/AdminLayout';
 import Home from './pages/Home';
 import About from './pages/About';
+import Team from './pages/Team';
 import Services from './pages/Services';
 import TrainingCenter from './pages/TrainingCenter';
 import Contacts from './pages/Contacts';
@@ -65,6 +66,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/services" element={<Services />} />
             <Route path="/training" element={<TrainingCenter />} />
             <Route path="/contacts" element={<Contacts />} />

@@ -18,6 +18,7 @@ function Header() {
   const navLinks = [
     { path: '/', key: 'nav.home' },
     { path: '/about', key: 'nav.about' },
+    { path: '/team', key: 'nav.team' },
     { path: '/services', key: 'nav.services' },
     { path: '/training', key: 'nav.training' },
     { path: '/legal', key: 'nav.legal' },
