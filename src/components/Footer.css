@@ -283,3 +283,11 @@
         justify-content: center;
     }
 }
+
+/* Footer Logo Image */
+.footer-logo-image {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}

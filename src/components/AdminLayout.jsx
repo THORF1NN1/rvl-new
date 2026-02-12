@@ -56,7 +56,7 @@ function AdminLayout() {
             <aside className="admin-sidebar">
                 <div className="admin-sidebar-header">
                     <div className="admin-logo">
-                        <span className="material-icons">biotech</span>
+                        <img src="/images/logo.png" alt="RVL Logo" className="logo-image" style={{ height: '32px' }} />
                         <span>RVL Admin</span>
                     </div>
                 </div>

@@ -47,9 +47,7 @@ function Footer() {
                     {/* Branding */}
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <div className="footer-logo-icon">
-                                <span className="material-icons">biotech</span>
-                            </div>
+                            <img src="/images/logo.png" alt="RVL Logo" className="footer-logo-image" />
                             <span className="footer-logo-text">RVL Kazakhstan</span>
                         </div>
                         <p>{t('footer.description', language)}</p>

@@ -76,9 +76,7 @@ function Header() {
       <div className="header-main">
         <div className="container header-main-content">
           <Link to="/" className="logo">
-            <div className="logo-icon">
-              <span className="material-icons">biotech</span>
-            </div>
+            <img src="/images/logo.png" alt="RVL Logo" className="logo-image" />
             <div className="logo-text">
               <span className="logo-title">{settings.siteName[language] || t('header.title', language)}</span>
               <span className="logo-subtitle">{t('header.subtitle', language)}</span>
