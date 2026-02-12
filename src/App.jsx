@@ -26,6 +26,7 @@ import FAQ from './pages/FAQ';
 import Calculator from './pages/Calculator';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminApplications from './pages/admin/AdminApplications';
+import AdminMessages from './pages/admin/AdminMessages';
 import AdminNews from './pages/admin/AdminNews';
 import AdminUsers from './pages/admin/AdminUsers';
 import AdminSettings from './pages/admin/AdminSettings';
@@ -82,6 +83,7 @@ function App() {
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<AdminDashboard />} />
               <Route path="applications" element={<AdminApplications />} />
+              <Route path="messages" element={<AdminMessages />} />
               <Route path="news" element={<AdminNews />} />
               <Route path="users" element={<AdminUsers />} />
               <Route path="settings" element={<AdminSettings />} />

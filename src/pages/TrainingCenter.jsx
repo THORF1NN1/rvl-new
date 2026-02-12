@@ -83,9 +83,9 @@ function TrainingCenter() {
     ];
 
     const resources = [
-        { title: { kz: '2024 Сертификаттау нұсқаулары', ru: 'Руководство по сертификации 2024', en: '2024 Certification Guidelines' }, size: 'PDF • 2.4 MB' },
-        { title: { kz: 'Зертхана қауіпсіздігі нұсқаулығы v3.0', ru: 'Руководство по безопасности лаборатории v3.0', en: 'Lab Safety Manual v3.0' }, size: 'DOCX • 1.1 MB' },
-        { title: { kz: 'Курстар каталогі Q4 2023', ru: 'Каталог курсов Q4 2023', en: 'Course Catalog Q4 2023' }, size: 'PDF • 5.8 MB' },
+        { title: { kz: '2024 Сертификаттау нұсқаулары', ru: 'Руководство по сертификации 2024', en: '2024 Certification Guidelines' }, size: 'PDF • 2.4 MB', url: '/resources/guidelines_2024.pdf' },
+        { title: { kz: 'Зертхана қауіпсіздігі нұсқаулығы v3.0', ru: 'Руководство по безопасности лаборатории v3.0', en: 'Lab Safety Manual v3.0' }, size: 'DOCX • 1.1 MB', url: '/resources/safety_manual.docx' },
+        { title: { kz: 'Курстар каталогі Q4 2023', ru: 'Каталог курсов Q4 2023', en: 'Course Catalog Q4 2023' }, size: 'PDF • 5.8 MB', url: '/resources/catalog_2023.pdf' },
     ];
 
     const events = [
@@ -157,7 +157,7 @@ function TrainingCenter() {
                                 </h3>
                                 <div className="resources-list">
                                     {resources.map((res, index) => (
-                                        <a key={index} href="#" className="resource-item">
+                                        <a key={index} href={res.url} download className="resource-item">
                                             <span className="material-icons">picture_as_pdf</span>
                                             <div>
                                                 <span className="resource-title">{res.title[language]}</span>

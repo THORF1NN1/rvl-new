@@ -36,6 +36,7 @@ function AdminLayout() {
     const menuItems = [
         { path: '/admin', icon: 'dashboard', label: { kz: 'Басқару тақтасы', ru: 'Панель', en: 'Dashboard' } },
         { path: '/admin/applications', icon: 'assignment', label: { kz: 'Өтінімдер', ru: 'Заявки', en: 'Applications' } },
+        { path: '/admin/messages', icon: 'chat', label: { kz: 'Хабарламалар', ru: 'Сообщения', en: 'Messages' } },
         { path: '/admin/news', icon: 'newspaper', label: { kz: 'Жаңалықтар', ru: 'Новости', en: 'News' } },
         { path: '/admin/users', icon: 'people', label: { kz: 'Пайдаланушылар', ru: 'Пользователи', en: 'Users' } },
         { path: '/admin/settings', icon: 'settings', label: { kz: 'Баптаулар', ru: 'Настройки', en: 'Settings' } },
