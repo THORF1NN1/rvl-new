@@ -12,6 +12,7 @@ import AdminLayout from './components/AdminLayout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
+import Verification from './pages/Verification';
 import Services from './pages/Services';
 import TrainingCenter from './pages/TrainingCenter';
 import Contacts from './pages/Contacts';
@@ -67,6 +68,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/verify" element={<Verification />} />
             <Route path="/services" element={<Services />} />
             <Route path="/training" element={<TrainingCenter />} />
             <Route path="/contacts" element={<Contacts />} />

@@ -103,6 +103,10 @@ function Header() {
 
           <div className="header-actions">
             <ThemeToggle />
+            <Link to="/verify" className="verify-btn" aria-label={t('header.verify', language)}>
+              <span className="material-icons">verified_user</span>
+              <span className="verify-text">{t('header.verify', language)}</span>
+            </Link>
             <button
               className="search-btn"
               onClick={() => setIsSearchOpen(true)}

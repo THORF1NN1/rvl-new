@@ -26,6 +26,7 @@ const translations = {
             en: 'Ministry of Agriculture, Republic of Kazakhstan',
         },
         search: { kz: 'Іздеу...', ru: 'Поиск...', en: 'Search...' },
+        verify: { kz: 'Нәтижені тексеру', ru: 'Проверить результат', en: 'Check Result' },
     },
 
     // Home page
