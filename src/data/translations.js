@@ -3,14 +3,14 @@ const translations = {
     // Navigation
     nav: {
         home: { kz: 'Басты бет', ru: 'Главная', en: 'Home' },
-        about: { kz: 'Біз туралы', ru: 'О нас', en: 'About Us' },
-        team: { kz: 'Басшылық', ru: 'Руководство', en: 'Leadership' },
+        about: { kz: 'Біз туралы', ru: 'О нас', en: 'About' },
+        team: { kz: 'Басшылық', ru: 'Руководство', en: 'Team' },
         services: { kz: 'Қызметтер', ru: 'Услуги', en: 'Services' },
-        training: { kz: 'Оқу орталығы', ru: 'Учебный центр', en: 'Training Center' },
-        legal: { kz: 'Құқықтық актілер', ru: 'Правовые акты', en: 'Legal Acts' },
-        media: { kz: 'Медиа орталығы', ru: 'Медиа-центр', en: 'Media' },
+        training: { kz: 'Оқу орталығы', ru: 'Обучение', en: 'Training' },
+        legal: { kz: 'НҚА', ru: 'НПА', en: 'Legal' },
+        media: { kz: 'Медиа', ru: 'Медиа', en: 'Media' },
         contacts: { kz: 'Байланыс', ru: 'Контакты', en: 'Contact' },
-        admin: { kz: 'Басқару тақтасы', ru: 'Админ-панель', en: 'Admin' },
+        admin: { kz: 'Басқару', ru: 'Админка', en: 'Admin' },
     },
 
     // Header
