@@ -14,7 +14,7 @@ function Team() {
                 ru: 'Доктор ветеринарных наук, профессор. Опыт работы в сфере более 25 лет.',
                 en: 'Doctor of Veterinary Sciences, Professor. More than 25 years of experience in the field.'
             },
-            image: '/images/avatar-1.png'
+            image: '/images/avatar-1.jpg'
         },
         {
             id: 2,
@@ -25,7 +25,7 @@ function Team() {
                 ru: 'Международный эксперт, специалист по созданию ПЦР лабораторий.',
                 en: 'International expert, specialist in setting up PCR laboratories.'
             },
-            image: '/images/avatar-2.png'
+            image: '/images/avatar-2.jpg'
         },
         {
             id: 3,
@@ -36,7 +36,7 @@ function Team() {
                 ru: 'Ведущий специалист по профилактике и ликвидации инфекционных заболеваний.',
                 en: 'Leading specialist in the prevention and eradication of infectious diseases.'
             },
-            image: '/images/avatar-3.png'
+            image: '/images/avatar-3.jpg'
         },
         {
             id: 4,
@@ -47,7 +47,7 @@ function Team() {
                 ru: 'Ответственный за внедрение и контроль стандарта ISO 17025.',
                 en: 'Responsible for implementation and control of ISO 17025 standard.'
             },
-            image: '/images/avatar-4.png'
+            image: '/images/avatar-4.jpg'
         }
     ];
 
@@ -68,8 +68,8 @@ function Team() {
                 <div className="team-grid">
                     {team.map(member => (
                         <div key={member.id} className="team-card">
-                            <div className="member-image">
-                                <span className="material-icons person-icon">person</span>
+                            <div className="member-image-wrapper">
+                                <img src={member.image} alt={member.name[language]} className="member-photo" />
                             </div>
                             <div className="member-info">
                                 <h3>{member.name[language]}</h3>
