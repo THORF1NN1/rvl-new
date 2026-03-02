@@ -68,8 +68,8 @@ function Team() {
                 <div className="team-grid">
                     {team.map(member => (
                         <div key={member.id} className="team-card">
-                            <div className="member-image-wrapper">
-                                <img src={member.image} alt={member.name[language]} className="member-photo" />
+                            <div className="member-image">
+                                <span className="material-icons person-icon">person</span>
                             </div>
                             <div className="member-info">
                                 <h3>{member.name[language]}</h3>
